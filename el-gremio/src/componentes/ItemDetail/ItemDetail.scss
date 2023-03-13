@@ -1,5 +1,6 @@
 .caja-detalle {
-    margin: 100px 40px;
+    max-width: 80%;
+    margin: 100px 60px;
     display: grid;
     grid-template-columns: 50%;
     grid-template-areas:
@@ -16,18 +17,27 @@
 
     }
 
+    .img-detalle{
+        margin: 30px;
+        max-width: 70%;
+        border-radius: 5px;
+    }
+
     .desc-detalle{
+        padding: 40px;
         color:#ffffff;
         font-size: 13px;
         text-align: justify;
     }
 
     .precio-detalle{
-        color: #ffffff;
+        padding:40px;
+        color: #cc0d0d;
     }
 
     .boton-detalle{
         margin-top: 20px;
+        margin-left: 60px;
         color: #ffffff;
         background-color: #cc0d0d;
         border-radius: 5px;

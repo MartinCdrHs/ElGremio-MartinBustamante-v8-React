@@ -1,6 +1,7 @@
 import "./ItemDetail.scss" 
 import { Link } from "react-router-dom";
 import{useNavigate} from "react-router-dom"
+import Contador from "../Contador/Contador";
 
 
 const ItemDetail = ({item}) => {
@@ -20,6 +21,7 @@ const ItemDetail = ({item}) => {
 
             <Link><button onClick={handleVolver} className="boton-detalle" id="volver">Volver</button></Link>
             
+            <Contador/>
                 
         </div>
     )
