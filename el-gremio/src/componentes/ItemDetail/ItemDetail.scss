@@ -1,12 +1,25 @@
 .caja-detalle {
     margin: 100px 40px;
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas:
+    "nombre nombre"
+    "img desc"
+    "img precio"
+    "volver cont";
 
     .nombre-detalle{
         color: #ffffff;
+        font-size: 50px;
+        margin: 50px;
+        text-align: center;
+
     }
 
     .desc-detalle{
-        color:#ffffff
+        color:#ffffff;
+        font-size: 13px;
+        text-align: justify;
     }
 
     .precio-detalle{
@@ -14,10 +27,19 @@
     }
 
     .boton-detalle{
+        margin-top: 20px;
         color: #ffffff;
         background-color: #cc0d0d;
         border-radius: 5px;
         border-color: #ffffff;
         border-width: 1px;
+        max-width: fit-content;
     }
 }
+
+#nombre{grid-area: nombre;}
+#img {grid-area: img;}
+#desc {grid-area: desc;}
+#precio {grid-area: precio;}
+#cont {grid-area: cont;}
+#volver {grid-area: volver;}

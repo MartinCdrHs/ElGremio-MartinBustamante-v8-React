@@ -1,16 +1,25 @@
 import "./ItemDetail.scss" 
 import { Link } from "react-router-dom";
+import{useNavigate} from "react-router-dom"
+
 
 const ItemDetail = ({item}) => {
 
+    const navigate = useNavigate()
+
+    const handleVolver = ()=> {
+        navigate(-1)
+    }
+
     return (
         <div className="caja-detalle">
-            <h2 className="nombre-detalle">{item.nombre}</h2>
-            <img src={item.imagen} alt={item.nombre} className="img-detalle"/>
-            <p className="desc-detalle">{item.descripcion}</p>
-            <p className="precio-detalle">Precio: ${item.precio}</p>
+            <p className="nombre-detalle" id="nombre">{item.nombre}</p>
+            <img src={item.imagen} alt={item.nombre} className="img-detalle" id="img"/>
+            <p className="desc-detalle" id="desc">{item.descripcion}</p>
+            <p className="precio-detalle" id="precio">Precio: ${item.precio}</p>
 
-            <Link><button className="boton-detalle">Volver</button></Link>
+            <Link><button onClick={handleVolver} className="boton-detalle" id="volver">Volver</button></Link>
+            
                 
         </div>
     )
