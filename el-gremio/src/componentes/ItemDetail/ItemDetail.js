@@ -12,6 +12,12 @@ const ItemDetail = ({item}) => {
         navigate(-1)
     }
 
+    const onAdd = (quantity) =>{
+        console.log(quantity)
+    }
+
+    
+
     return (
         <div className="caja-detalle">
             <p className="nombre-detalle" id="nombre">{item.nombre}</p>
@@ -21,7 +27,7 @@ const ItemDetail = ({item}) => {
 
             <Link><button onClick={handleVolver} className="boton-detalle" id="volver">Volver</button></Link>
             
-            <Contador/>
+            <Contador initial={1} stock={item.stock} onAdd={onAdd} />
                 
         </div>
     )
